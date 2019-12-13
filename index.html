@@ -15,6 +15,10 @@
       cursor: pointer;   
     }
 
+    h1, .h1 {
+    font-size: 500%;
+    }
+
     .rcorners1 {
       border-radius: 25px;
       background:rgba(185, 186, 187, 0.1);
@@ -81,6 +85,37 @@
       90% { transform: translate(1px, 2px) rotate(0deg); }
       100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
+
+    @media only screen and (min-width: 600px) {
+      /* For tablets: */
+      
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+    
+      body {
+      font-size: 14px;
+      }
+
+      h1, .h1 {
+      font-size: 250%;
+      }
+
+      h2, .h2 {
+      font-size: 150%;
+      } 
+      
+      h5, .h5 {
+      font-size: 125%;
+      }
+
+      .smIcons {
+      font-size: 38px;
+      }
+
+    }
+
     
   </style>
 </head>
@@ -91,9 +126,7 @@
     <h1>Jordan Bellinger</h1><br />
     <a id="phoSqT" onclick="phoneSq()"><i class="fa fa-phone-square smIcons"></i></a><div id="mobNumT">+44 (0)7920 745523</div>
     <a id="envSqT" onclick="envelSq()"><i class="fa fa-envelope-square smIcons"></i></a><div id="emailAdT"><a class="emailAd" href="mailto:jordanbellinger17@hotmail.com" target="_top">jordanbellinger17@hotmail.com</a></div>
-    <a id="linSqT" href="" target="_blank"><i class="fa fa-linkedin-square smIcons"></i></a>
-    <a id="facSqT" href="" target="_blank"><i class="fa fa-facebook-square smIcons"></i></a>
-    <a id="gitSqT" href="" target="_blank"><i class="fa fa-git-square smIcons"></i></a>
+    <a id="linSqT" href="https://www.linkedin.com/in/jordan-b-031017ab/" target="_blank"><i class="fa fa-linkedin-square smIcons"></i></a>
   </div>
 
   <div class="container" style="padding: 30px 50px 0px; background-color: white;">
@@ -244,15 +277,13 @@
   <div class="jumbotron text-center" style="margin-bottom:0">
     <a id="phoSqB" onclick="phoneSq()"><i class="fa fa-phone-square smIcons"></i></a><div id="mobNumB">+44 (0)7920 745523</div>
     <a id="envSqB" onclick="envelSq()"><i class="fa fa-envelope-square smIcons"></i></a><div id="emailAdB"><a class="emailAd" href="mailto:jordanbellinger17@hotmail.com" target="_top">jordanbellinger17@hotmail.com</a></div>
-    <a id="linSqB" href="" target="_blank"><i class="fa fa-linkedin-square smIcons"></i></a>
-    <a id="facSqB" href="" target="_blank"><i class="fa fa-facebook-square smIcons"></i></a>
-    <a id="gitSqB" href="" target="_blank"><i class="fa fa-git-square smIcons"></i></a>
+    <a id="linSqB" href="https://www.linkedin.com/in/jordan-b-031017ab/" target="_blank"><i class="fa fa-linkedin-square smIcons"></i></a>
   </div>
 
   <script>
     function phoneSq() {
 
-      var items = document.querySelectorAll('#envSqT, #linSqT, #facSqT, #gitSqT, #envSqB, #linSqB, #facSqB, #gitSqB');
+      var items = document.querySelectorAll('#envSqT, #linSqT, #envSqB, #linSqB');
       for (var i = 0; i < items.length; i++) {
         if (items[i].style.display === "none") {
           items[i].style.display = "inline-block";
@@ -273,7 +304,7 @@
 
     function envelSq() {
 
-      var items = document.querySelectorAll('#phoSqT, #linSqT, #facSqT, #gitSqT, #phoSqB, #linSqB, #facSqB, #gitSqB');
+      var items = document.querySelectorAll('#phoSqT, #linSqT, #phoSqB, #linSqB');
 
       for (var i = 0; i < items.length; i++) {
         if (items[i].style.display === "none") {

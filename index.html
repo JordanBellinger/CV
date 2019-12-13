@@ -86,12 +86,37 @@
       100% { transform: translate(1px, -2px) rotate(-1deg); }
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (max-width: 768px) {
       /* For tablets: */
+
+      .container {
+        max-width: 575px;
+      }
       
+      body {
+      font-size: 14px;
+      }
+
+      h1, .h1 {
+      font-size: 250%;
+      }
+
+      h2, .h2 {
+      font-size: 150%;
+      } 
+      
+      h5, .h5 {
+      font-size: 125%;
+      }
+
+      .smIcons {
+      font-size: 38px;
+      }
+
+
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 400px) {
       /* For mobile phones: */
     
       body {
